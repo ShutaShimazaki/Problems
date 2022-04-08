@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block title %} Charge {% endblock %} {% block
+main %}
+<form action="/charge" method="post">
+  <div class="form-group">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control"
+      name="money"
+      placeholder="Charge amount"
+      type="text"
+    />
+  </div>
+
+  <button class="btn btn-primary" type="submit" onClick="return check();">
+    Charge!!
+  </button>
+</form>
+
+<script>
+  function check() {
+  	var result = window.confirm("チャージします。よろしいですか？");
+  	if (result){
+  		return true;
+  	}else{
+  		return false;
+  	}
+  });
+</script>
+
+{% endblock %}

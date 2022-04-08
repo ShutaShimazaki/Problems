@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <link href="styles.css" rel="stylesheet" />
+    <title>My Webpage</title>
+  </head>
+
+  <!-- header-->
+  <body>
+    <header id="header">
+      <h1 class="headline">アザラシシーパラダイスへようこそ</h1>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a
+              href="https://shutashimazaki-code50-93859043-v6wr9grxr2xxp5-8080.githubpreview.dev/agu.html"
+              class="linkbuttons"
+              >アグ
+            </a>
+          </li>
+
+          <li class="nav-list-item">
+            <a
+              href="https://shutashimazaki-code50-93859043-v6wr9grxr2xxp5-8080.githubpreview.dev/hiyori.html"
+              class="linkbuttons"
+              >hiyori
+            </a>
+          </li>
+
+          <li class="nav-list-item">
+            <a
+              href="https://shutashimazaki-code50-93859043-v6wr9grxr2xxp5-8080.githubpreview.dev/kyoro.html"
+              class="linkbuttons"
+              >キョロ
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://shutashimazaki-code50-93859043-v6wr9grxr2xxp5-8080.githubpreview.dev/index.html"
+            >
+              indexへ戻る
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <img
+      src="/image/agu.nose.jpeg"
+      alt=""
+      id="pic_nose"
+      width="640"
+      height="480"
+      style="display: block; margin: auto"
+    />
+    <script>
+      var images = [
+        "/image/agu.nose.jpeg",
+        "/image/aguinwater.jpg",
+        "/image/aguonsnow.jpeg",
+      ];
+      var num = -1;
+      slideshow();
+
+      function slideshow() {
+        if (num == 2) {
+          num = 0;
+        } else {
+          num++;
+        }
+        document.getElementById("pic_nose").src = images[num];
+        setTimeout("slideshow()", 4000);
+      }
+    </script>
+
+    <div class="wrap">
+      <div class="main">
+        <div>
+          この施設は空港路線の維持・利用と着地型観光の促進を目的として2015年９月にオープンしました。
+          　２頭のアザラシが暮らす飼育プールの他に人工海水浴場であるホワイトビーチの一部を自然環境一体型の展示施設として利用しています。
+          　アザラシにえさを直接あげることができる「えさやり体験」を実施中です。
+          　現在はゴマフアザラシのアグ（33才）と日和（7才）と
+          キョロ（8才）が暮らしています。
+        </div>
+      </div>
+
+      <div class="side">
+        <div>
+          <a
+            class="twitter-timeline"
+            data-lang="ja"
+            data-width="450"
+            data-height="800"
+            data-theme="dark"
+            href="https://twitter.com/aguhiyori?ref_src=twsrc%5Etfw"
+            >Tweets by aguhiyori</a
+          >
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
+        </div>
+
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/jK52z-hWvIk?start=33"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2853.8918196543914!2d143.37306825091437!3d44.332727716139324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f1288d2ea1ded93%3A0x2d45fb693e4278f4!2z44Ki44K244Op44K3IOOCt-ODvOODkeODqeODgOOCpOOCuQ!5e0!3m2!1sja!2sjp!4v1643453355659!5m2!1sja!2sjp"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+
+    <h2>えさやり体験</h2>
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>1回目</th>
+            <th>2回目</th>
+            <th>3回目</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11:00</td>
+            <td>13:00</td>
+            <td>16:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      所在地:〒094-0031 北海道紋別市海洋公園２
+      <a href="https://goo.gl/maps/q8xt8imk7N2NBN14A">GoogleMapで開く</a>
+    </p>
+  </body>
+</html>

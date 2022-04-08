@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block title %} History {% endblock %} {% block
+main %}
+<table>
+  <tr>
+    <th>Symbol</th>
+    <th>Shares</th>
+    <th>Price_then</th>
+    <th>Transacted</th>
+  </tr>
+
+  <!--     # history =[{'symbol': 'AAPL', 'shares': 5, 'stockprice': 176.28, 'time': '2022-02-10 20:59:00'}, {'symbol': 'NFLX', 'shares': 1, 'stockprice': 412.89, 'time': '2022-02-10 21:17:16'}, {'symbol': 'AAPL', 'shares': -4, 'stockprice': 175.035, 'time': '2022-02-11 00:08:53'}]
+-->
+  {% for i in history%}
+  <tr>
+    <td>{{i["symbol"]}}</td>
+    <td>{{i["shares"]}}</td>
+    <td>{{(i["stockprice"]) | usd}}</td>
+    <td>{{i["time"]}}</td>
+  </tr>
+  {% endfor %}
+
+  {% if charge_history != none%}
+  {% for i in charge_history %}
+
+  <tr style="color: red">
+    <td>charge</td>
+    <td>+ {{i["amount"]}}</td>
+    <td>now: {{i["cash_now"]}}</td>
+    <td>{{i["time"]}}</td>
+  </tr>
+  {% endfor %}
+  {% endif%}
+</table>
+
+{% endblock %}

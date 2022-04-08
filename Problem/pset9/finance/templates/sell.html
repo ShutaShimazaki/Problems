@@ -1,0 +1,28 @@
+{% extends "layout.html" %} {% block title %} Quote {% endblock %} {% block main
+%}
+<form action="/sell" method="post">
+  <!--[{'symbol': 'AAPL',  'SUM(shares)': 6, }, {'symbol': 'AMZN',, 'SUM(shares)': 1,}, {'symbol': 'NFLX', 'formalname': 'NetFlix Inc', 'SUM(shares)': 4, 'stockprice': 398.4}]-->
+
+  <p>
+    <select name="symbol">
+      <option disabled selected>Choice symbol</option>
+      {% for symbol in symbols %}
+      <option>{{symbol["symbol"]}}</option>
+
+      {% endfor%}
+    </select>
+  </p>
+
+  <div class="form-group">
+    <input
+      class="form-control"
+      name="shares"
+      placeholder="Shares"
+      type="text"
+      autocomplete="off"
+    />
+  </div>
+
+  <button class="btn btn-primary" type="submit">Sell</button>
+</form>
+{% endblock %}

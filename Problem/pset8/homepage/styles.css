@@ -1,0 +1,71 @@
+body {
+  padding: 0px;
+  margin: 60px;
+  font-family: "MSゴシック", "メイリオ";
+  text-align: center;
+}
+header {
+  margin: 0 0;
+  padding: 0 0;
+  text-align: center;
+  background-image: url("/image/雪.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .headline {
+  font-size: 32px;
+}
+
+.nav-list-item {
+  width: 200px;
+  padding: 3px 0;
+  text-align: center;
+  margin: 20px 20px;
+  display: inline-block;
+  background: orange;
+  box-shadow: 2px 2px #f17816;
+
+  font-size: 25px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.linkbuttons {
+  color: #ffffff;
+}
+
+.wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 50px auto;
+}
+.main {
+  width: 50%;
+  background: pink;
+}
+.side {
+  width: 50%;
+  background: skyblue;
+  padding: 20px;
+}
+.side div {
+  margin: 40px 0;
+}
+
+h2 {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.table {
+  margin: 3px auto;
+  width: 300px;
+}
+
+/* .col-5 ml-3 {
+  display: flex;
+  justify-content: center;
+} */
+
+/* #b34f0d; */

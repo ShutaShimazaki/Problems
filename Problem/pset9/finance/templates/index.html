@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block title %} Quote {% endblock %} {% block main
+%}
+<table>
+  <tr>
+    <th>Symbol</th>
+    <th>Formal name</th>
+    <th>Shares</th>
+    <th>Price</th>
+    <th>TOTAL</th>
+  </tr>
+
+  <!--[{'symbol': 'AAPL', 'formalname': 'Apple Inc', 'SUM(shares)': 6, 'stockprice': 172.08}, {'symbol': 'AMZN', 'formalname': 'Amazon.com Inc.', 'SUM(shares)': 1, 'stockprice': 3153.52}, {'symbol': 'NFLX', 'formalname': 'NetFlix Inc', 'SUM(shares)': 4, 'stockprice': 398.4}]-->
+  {%for symbol in symbols %}
+  <tr>
+    <td>{{symbol["symbol"]}}</td>
+    <td>{{symbol["formalname"]}}</td>
+    <td>{{symbol["SUM(shares)"]}}</td>
+    <td>{{(stockprice_dict[symbol["symbol"]]) | usd}}</td>
+    <td>
+      {{(symbol["SUM(shares)"] * stockprice_dict[symbol["symbol"]]) | usd}}
+      <!--<script language="javascript">
+      shares_stocks = document.write({{symbol["SUM(shares)"] * symbol["stockprice"]}}.toFixed(2));
+      </script> -->
+    </td>
+  </tr>
+  {%endfor%}
+
+  <!--CASH　現金を表示 -->
+  <tr>
+    <td>CASH</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>{{cash | usd}}</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>{{total | usd}}</td>
+  </tr>
+</table>
+
+{% endblock %}
